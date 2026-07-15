@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Reason You Can't Stop Thinking About Food - Blissley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,720&family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F5EFDF; --paper-deep:#EFE7D2; --card:#FFFFFF;
+    --ink:#21241E; --ink-soft:#4A4C40;
+    --teal:#1F6F5C; --teal-deep:#14493D;
+    --gold:#C98A2C; --rust:#B8431F; --rust-deep:#8F3216;
+    --muted:#A79C82; --line:rgba(33,36,30,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Sora',-apple-system,sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:1180px;margin:0 auto;}
+  .wordmark{font-family:'Fraunces',serif;font-weight:650;font-size:19px;}
+  .ad-tag{font-size:10.5px;font-weight:600;color:var(--ink-soft);border:1px solid var(--line);padding:5px 10px;border-radius:100px;}
+
+  .hero{padding:16px 24px 56px;max-width:900px;margin:0 auto;text-align:center;}
+  .eyebrow{font-size:12px;font-weight:600;color:var(--teal-deep);margin-bottom:16px;}
+  .eyebrow .dot{display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%;margin-right:8px;}
+  h1{font-size:clamp(32px,5vw,54px);line-height:1.08;letter-spacing:-0.01em;font-weight:650;margin-bottom:20px;}
+  .hero-dek{font-size:18px;color:var(--ink-soft);max-width:580px;margin:0 auto 30px;}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--rust);color:#FBF6EC;font-family:'Sora';font-weight:600;font-size:15.5px;padding:15px 30px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 14px 28px -12px rgba(184,67,31,0.55);transition:transform .15s ease,background .15s ease;}
+  .btn:hover{background:var(--rust-deep);transform:translateY(-1px);}
+  .btn:focus-visible{outline:3px solid var(--teal-deep);outline-offset:3px;}
+  .trust-row{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;justify-content:center;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-soft);font-weight:500;}
+
+  .wave{display:block;width:100%;height:32px;}
+
+  .trustbar{background:var(--teal-deep);padding:20px 24px;}
+  .trustbar .wrap{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;}
+  .trustbar-item{color:#E7E5D4;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;}
+
+  .intro{max-width:660px;margin:0 auto;padding:56px 24px 8px;text-align:center;}
+  .intro p{color:var(--ink-soft);font-size:17px;}
+
+  /* alternating rows */
+  .rows{max-width:1040px;margin:0 auto;padding:20px 24px 40px;}
+  .row{display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;align-items:center;padding:46px 0;border-bottom:1px solid var(--line);}
+  .row:last-child{border-bottom:none;}
+  .row.rev{grid-template-columns:1.1fr 0.9fr;}
+  .row.rev .row-img{order:2;}
+  .row.rev .row-text{order:1;}
+  .row-img img, .row-img svg{width:100%;height:auto;border-radius:16px;display:block;box-shadow:0 20px 40px -22px rgba(33,36,30,0.35);}
+  .row-img svg{background:var(--card);border:1px solid var(--line);}
+  .row-img img{background:var(--paper-deep);aspect-ratio:4/3;object-fit:cover;}
+  .row-num{font-family:'Fraunces';font-weight:650;font-size:15px;color:var(--gold);margin-bottom:10px;}
+  .row-text h3{font-size:clamp(20px,2.4vw,25px);font-weight:650;line-height:1.25;margin-bottom:12px;}
+  .row-text p{margin:0;color:var(--ink-soft);font-size:15.5px;line-height:1.6;}
+  .row-text p + p{margin-top:11px;}
+  .row-text strong{color:var(--ink);font-weight:600;}
+  .stat-badge{display:inline-flex;flex-direction:column;background:#E7F1EC;border:1px solid var(--teal);border-radius:12px;padding:10px 18px;margin-top:16px;}
+  .stat-badge .num{font-family:'Fraunces';font-weight:720;font-size:28px;color:var(--teal-deep);line-height:1;}
+  .stat-badge .lbl{font-size:11px;color:var(--ink-soft);margin-top:3px;}
+
+  /* mid-page CTA */
+  .midcta{max-width:1040px;margin:0 auto;padding:8px 24px 20px;}
+  .midcta-box{background:var(--teal-deep);border-radius:18px;padding:34px 30px;text-align:center;}
+  .midcta-box h2{color:#FBF6EC;font-size:clamp(21px,3vw,28px);font-weight:650;max-width:560px;margin:0 auto 18px;line-height:1.2;}
+  .midcta-box .btn{background:var(--gold);color:#241a08;box-shadow:0 14px 28px -12px rgba(201,138,44,0.6);}
+  .midcta-box .btn:hover{background:#b87c24;}
+
+  .worth{padding:60px 24px;background:var(--paper-deep);}
+  .worth-box{max-width:800px;margin:0 auto;background:var(--card);border:1.5px solid var(--rust);border-radius:16px;padding:30px 32px;}
+  .worth-box h3{font-family:'Sora';font-size:16px;font-weight:700;color:var(--rust-deep);margin-bottom:16px;}
+  .worth-box p{margin:0 0 14px;font-size:14px;color:var(--ink-soft);line-height:1.6;}
+  .worth-box p:last-child{margin-bottom:0;}
+  .worth-box strong{color:var(--ink);font-weight:700;}
+
+  .cta{padding:88px 24px 84px;text-align:center;background:linear-gradient(180deg,var(--paper),var(--teal-deep) 60%);}
+  .cta-mark{width:74px;height:74px;margin:0 auto 22px;display:block;filter:drop-shadow(0 16px 24px rgba(0,0,0,0.3));}
+  .cta h2{color:#FBF6EC;font-size:clamp(26px,4vw,40px);font-weight:650;max-width:600px;margin:0 auto 16px;}
+  .cta p{color:#D9E2DC;max-width:470px;margin:0 auto 32px;font-size:16px;}
+  .cta .fineprint{font-size:12px;color:#B7C6BF;margin-top:20px;}
+
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--card);border-top:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:16px;transform:translateY(120%);transition:transform .35s ease;box-shadow:0 -8px 24px -12px rgba(0,0,0,0.18);}
+  .sticky-cta.show{transform:translateY(0);}
+  .sticky-cta span{font-size:13.5px;font-weight:600;color:var(--ink);}
+  .sticky-cta .btn{padding:12px 22px;font-size:13.5px;min-height:44px;}
+
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+  footer{background:var(--ink);color:#A9A896;padding:40px 24px 104px;}
+  footer .wrap{max-width:800px;}
+  footer p{font-size:12.3px;line-height:1.7;margin:0;color:#9C9A88;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+  @media (max-width:760px){
+    .row, .row.rev{grid-template-columns:1fr;gap:20px;padding:32px 0;}
+    .row.rev .row-img{order:1;}
+    .row.rev .row-text{order:2;}
+    .trustbar .wrap{gap:18px;}
+    .hero{padding-bottom:40px;}
+  }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="wordmark">Blissley</span>
+  <span class="ad-tag">ADVERTISEMENT</span>
+</div>
+
+<!--
+  A/B HEADLINE ALTERNATES (swap into <h1> to test):
+  1. "7 Signs Your 'Lack of Willpower' Is Actually Food Noise, And What Finally Turns It Off"
+  2. "You Don't Have a Willpower Problem. You Have Food Noise. Here's What That Means."
+  3. "Constant Thoughts About Food? There's a Name For It, And a Reason Diets Never Fixed It."
+-->
+<div class="hero">
+  <div class="eyebrow"><span class="dot"></span>WHY "JUST EAT LESS" NEVER WORKED</div>
+  <h1>The Real Reason You Can't Stop Thinking About Food (It Isn't Willpower)</h1>
+  <p class="hero-dek">If your brain never stops bargaining over your next meal, you are not weak and you are not alone. There is a name for it, a real reason behind it, and a treatment that may help quiet it, with nothing to do with trying harder.</p>
+  <a class="btn" href="#quiz">See If You Qualify</a>
+  <div class="trust-row">
+    <span class="trust-item">✓ Licensed U.S. providers</span>
+    <span class="trust-item">✓ Personalized plan</span>
+    <span class="trust-item">✓ No long-term contract</span>
+  </div>
+</div>
+
+<svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,25 C100,5 200,45 300,25 C400,5 500,45 600,25 C700,5 800,45 900,25 C1000,5 1100,45 1200,25" fill="none" stroke="#1F6F5C" stroke-width="2.5" opacity="0.55"/>
+  <path d="M0,25 C100,45 200,5 300,25 C400,45 500,5 600,25 C700,45 800,5 900,25 C1000,45 1100,5 1200,25" fill="none" stroke="#C98A2C" stroke-width="2.5" opacity="0.5"/>
+</svg>
+
+<div class="trustbar">
+  <div class="wrap">
+    <span class="trustbar-item">72-week clinical trial data</span>
+    <span class="trustbar-item">Dual-hormone mechanism</span>
+    <span class="trustbar-item">Individual health review required</span>
+  </div>
+</div>
+
+<div class="intro reveal">
+  <p>You have counted the calories. You have tried the plans. And still, the thoughts about food never stop. There is a name for those thoughts, it is called food noise, and here is what is actually going on, why willpower was never the problem, and what quiets the volume.</p>
+</div>
+
+<h2 class="sr-only">What food noise is, and what quiets it</h2>
+<div class="rows">
+
+  <!-- ITEM 1 - Name the problem (SVG: food-noise head vs quiet head) -->
+  <div class="row reveal">
+    <div class="row-img">
+      <svg viewBox="0 0 400 300" role="img" aria-label="Split illustration. On the left, a head crowded with food thought-bubbles and a jagged noise waveform, labeled Before. On the right, a calm head with a flat, quiet line, labeled After.">
+        <rect width="400" height="300" fill="#FFFFFF"/>
+        <line x1="200" y1="34" x2="200" y2="266" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <text x="34" y="42" class="mono" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="#B8431F">BEFORE</text>
+        <text x="366" y="42" class="mono" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="#1F6F5C" text-anchor="end">AFTER</text>
+        <!-- Left head (noisy) -->
+        <path d="M62,210 C50,150 70,96 108,84 C150,70 182,104 180,152 C179,182 168,200 150,214 L150,238 L92,238 L92,214 Z" fill="none" stroke="#21241E" stroke-width="2.2" stroke-linejoin="round"/>
+        <!-- noisy scribble inside head -->
+        <polyline points="90,150 100,136 108,162 118,140 128,164 138,140 150,160 162,146" fill="none" stroke="#B8431F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <polyline points="94,171 104,161 112,178 122,162 132,178 144,161 154,174 164,164" fill="none" stroke="#C98A2C" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+        <!-- food thought bubbles -->
+        <circle cx="70" cy="70" r="15" fill="none" stroke="#C98A2C" stroke-width="2"/>
+        <path d="M63,72 h14 M64,67 q6,-5 12,0" fill="none" stroke="#C98A2C" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="150" cy="58" r="14" fill="none" stroke="#B8431F" stroke-width="2"/>
+        <circle cx="150" cy="58" r="4" fill="none" stroke="#B8431F" stroke-width="2"/>
+        <circle cx="176" cy="104" r="12" fill="none" stroke="#C98A2C" stroke-width="2"/>
+        <path d="M170,106 h12 M171,101 q5,-4 10,0" fill="none" stroke="#C98A2C" stroke-width="2" stroke-linecap="round"/>
+        <text x="118" y="278" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.5" fill="#8F3216" text-anchor="middle">"when can I eat?"</text>
+        <!-- Right head (quiet) -->
+        <path d="M262,210 C250,150 270,96 308,84 C350,70 382,104 380,152 C379,182 368,200 350,214 L350,238 L292,238 L292,214 Z" fill="none" stroke="#21241E" stroke-width="2.2" stroke-linejoin="round"/>
+        <!-- calm flat line inside -->
+        <line x1="292" y1="156" x2="360" y2="156" stroke="#1F6F5C" stroke-width="2.4" stroke-linecap="round"/>
+        <!-- small check -->
+        <path d="M312,120 l8,8 l16,-17" fill="none" stroke="#1F6F5C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="320" y="278" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.5" fill="#14493D" text-anchor="middle">quiet</text>
+      </svg>
+    </div>
+    <div class="row-text">
+      <div class="row-num">01 / 07</div>
+      <h3>First, the name for the thing that has followed you for years: food noise.</h3>
+      <p>You just finished lunch. Part of your brain is already asking about dinner. It runs the numbers on the pastry case, negotiates the 3pm snack, and pulls you toward the kitchen at 11pm when you are not even hungry.</p>
+      <p>That running commentary has a name. Researchers call it <strong>food noise</strong>. Once you have a word for it, it stops feeling like a personal flaw and starts looking like what it is: a signal.</p>
+      <div class="stat-badge"><span class="num">57%</span><span class="lbl">of people with weight struggles report food noise, yet only 12% had heard the term (Beyond Hunger report, STOP Obesity Alliance with WeightWatchers, 2024)</span></div>
+    </div>
+  </div>
+
+  <!-- ITEM 2 - Why willpower diets fail (PHOTO placeholder) -->
+  <div class="row rev reveal">
+    <div class="row-img">
+      <!-- AI IMAGE PROMPT: A photorealistic editorial magazine photo, warm natural window light, 4:3, no text in the image. A woman in her mid-forties sits alone at a kitchen table in the early evening, looking quietly worn down and frustrated, one hand resting near an untouched small salad and a half-empty water glass. A discarded diet plan booklet and a food scale sit nearby. Honest, human, not staged, soft shadows, muted warm palette of cream, terracotta and sage that matches an editorial wellness brand. Her expression says "I did everything right and it still did not work." -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23EFE7D2'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='13' fill='%23A79C82' text-anchor='middle'%3Ephoto placeholder 4:3%3C/text%3E%3C/svg%3E" alt="A woman in her forties sits at a kitchen table looking worn out beside an untouched salad and a discarded diet plan.">
+    </div>
+    <div class="row-text">
+      <div class="row-num">02 / 07</div>
+      <h3>It was never willpower. The game was quietly rigged against you.</h3>
+      <p>You tried keto, but the cravings came back louder. You counted every calorie, but the mental chatter never stopped. Here is why.</p>
+      <p>When you lose weight, your body fights to put it back. Hunger hormones like ghrelin climb. The signals that tell your brain you are full get quieter. Your metabolism slows and stays slow.</p>
+      <p>You were not failing the diet. <strong>Your biology was defending the weight, on a schedule, every single time.</strong> No amount of discipline out-argues a hormone.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 3 - The mechanism (SVG: dual GIP/GLP-1 pathway) -->
+  <div class="row reveal">
+    <div class="row-img">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A simple pathway diagram. The gut at the bottom releases two hormones, GIP and GLP-1, which travel up two arrows to the brain at the top, switching on a fullness signal that reads full.">
+        <rect width="400" height="300" fill="#FFFFFF"/>
+        <!-- Brain (top) -->
+        <path d="M170,52 C150,40 128,50 126,70 C110,72 104,92 118,102 C112,120 132,132 148,124 C158,138 184,136 190,120 C208,122 220,104 208,90 C216,72 200,52 180,58 C178,52 174,50 170,52 Z" fill="#E7F1EC" stroke="#14493D" stroke-width="2.2" stroke-linejoin="round"/>
+        <text x="235" y="88" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="#14493D">BRAIN</text>
+        <!-- fullness pill -->
+        <rect x="228" y="98" width="72" height="26" rx="13" fill="#1F6F5C"/>
+        <text x="264" y="115" font-family="Sora, sans-serif" font-size="12" font-weight="600" fill="#FBF6EC" text-anchor="middle">full</text>
+        <defs>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8 Z" fill="#C98A2C"/></marker>
+          <marker id="ah2" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8 Z" fill="#B8431F"/></marker>
+        </defs>
+        <!-- Arrows up (drawn first so opaque label pills mask them) -->
+        <path d="M150,206 L150,130" fill="none" stroke="#C98A2C" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah)"/>
+        <path d="M200,206 L200,130" fill="none" stroke="#B8431F" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah2)"/>
+        <!-- hormone labels (opaque fill masks the arrow behind the text) -->
+        <rect x="126" y="150" width="48" height="24" rx="12" fill="#FFFFFF" stroke="#C98A2C" stroke-width="2"/>
+        <text x="150" y="166" font-family="Sora, sans-serif" font-size="12" font-weight="600" fill="#a06f1f" text-anchor="middle">GIP</text>
+        <rect x="176" y="150" width="64" height="24" rx="12" fill="#FFFFFF" stroke="#B8431F" stroke-width="2"/>
+        <text x="208" y="166" font-family="Sora, sans-serif" font-size="11" font-weight="600" fill="#8F3216" text-anchor="middle">GLP-1</text>
+        <!-- Gut (bottom) -->
+        <path d="M150,214 C120,214 118,250 148,252 C150,268 178,268 182,254 C214,258 222,226 198,218 C196,206 168,204 150,214 Z" fill="#F5EFDF" stroke="#21241E" stroke-width="2.2" stroke-linejoin="round"/>
+        <text x="173" y="292" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="#4A4C40" text-anchor="middle">GUT</text>
+        <!-- slowed emptying note -->
+        <text x="315" y="205" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#A79C82" text-anchor="middle">slows how</text>
+        <text x="315" y="220" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#A79C82" text-anchor="middle">fast you</text>
+        <text x="315" y="235" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#A79C82" text-anchor="middle">empty</text>
+      </svg>
+    </div>
+    <div class="row-text">
+      <div class="row-num">03 / 07</div>
+      <h3>What can actually turn the volume down.</h3>
+      <p>After you eat, your gut makes hormones that tell your brain a simple thing: you are full, you can stop now. In a lot of people, that signal comes in weak.</p>
+      <p>A newer class of medication, called dual <strong>GIP and GLP-1 receptor agonists</strong>, mimics those natural fullness hormones and slows how fast your stomach empties. In plain terms, it may help turn your body's own "I am satisfied" signal back up. The most common thing patients report is not dramatic. It is quiet.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 4 - Measurable results (SVG: weight curve) + stat -->
+  <div class="row rev reveal">
+    <div class="row-img">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A line chart. Body weight trends steadily downward from week zero to week 72. A shaded band at the end marks the 15 to 22.5 percent reduction range measured in clinical trials.">
+        <rect width="400" height="300" fill="#FFFFFF"/>
+        <!-- axes -->
+        <line x1="56" y1="40" x2="56" y2="248" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="56" y1="248" x2="372" y2="248" stroke="var(--line)" stroke-width="1.5"/>
+        <!-- gridlines -->
+        <line x1="56" y1="90" x2="372" y2="90" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/>
+        <line x1="56" y1="150" x2="372" y2="150" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/>
+        <line x1="56" y1="200" x2="372" y2="200" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/>
+        <!-- shaded result band at end (15% to 22.5%) -->
+        <rect x="300" y="150" width="72" height="72" fill="#C98A2C" opacity="0.16"/>
+        <line x1="300" y1="150" x2="372" y2="150" stroke="#C98A2C" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="300" y1="222" x2="372" y2="222" stroke="#C98A2C" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <!-- weight curve -->
+        <path d="M56,66 C120,74 150,96 196,132 C240,166 270,188 330,206 C346,210 360,212 372,214" fill="none" stroke="#1F6F5C" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="56" cy="66" r="4.5" fill="#1F6F5C"/>
+        <circle cx="372" cy="214" r="5.5" fill="#B8431F"/>
+        <!-- labels -->
+        <text x="56" y="266" font-family="IBM Plex Mono, monospace" font-size="10" fill="#4A4C40" text-anchor="middle">week 0</text>
+        <text x="372" y="266" font-family="IBM Plex Mono, monospace" font-size="10" fill="#4A4C40" text-anchor="end">week 72</text>
+        <text x="336" y="144" font-family="Sora, sans-serif" font-size="11" font-weight="700" fill="#8F3216" text-anchor="middle">15–22.5%</text>
+        <text x="30" y="144" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#A79C82" text-anchor="middle" transform="rotate(-90 30 144)">body weight</text>
+      </svg>
+    </div>
+    <div class="row-text">
+      <div class="row-num">04 / 07</div>
+      <h3>You do not have to take anyone's word for it.</h3>
+      <p>This is where it stops being a feeling and becomes data. In 72-week clinical trials of tirzepatide, participants saw average body weight reductions of <strong>15% to 22.5%</strong>.</p>
+      <p>Those trials studied the FDA-approved branded medication. Blissley provides a compounded form of tirzepatide, prescribed only after a provider decides it is right for you, and the trial figures are not a guarantee of any one person's results. Still, they are real numbers from real studies, which is more than almost any diet you have tried can say.</p>
+      <div class="stat-badge"><span class="num">15–22.5%</span><span class="lbl">Body weight reduction at 72 weeks in clinical trials of branded tirzepatide</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MID-PAGE CTA (after item 4) -->
+<div class="midcta reveal">
+  <div class="midcta-box">
+    <h2>Curious whether the noise in your head has a name and a fix?</h2>
+    <a class="btn" href="#quiz">Take the 2-Minute Quiz</a>
+  </div>
+</div>
+
+<div class="rows" style="padding-top:0;">
+
+  <!-- ITEM 5 - What patients notice first (SVG: mental bandwidth bars) -->
+  <div class="row reveal">
+    <div class="row-img">
+      <svg viewBox="0 0 400 300" role="img" aria-label="A bar comparison of mental bandwidth. Before, a long bar shows most of the day spent on food thoughts and a short bar for everything else. After, the food-thoughts bar is short and the everything-else bar is long.">
+        <rect width="400" height="300" fill="#FFFFFF"/>
+        <text x="34" y="52" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#B8431F">BEFORE</text>
+        <!-- before: food thoughts long -->
+        <text x="34" y="82" font-family="Sora, sans-serif" font-size="11" fill="#4A4C40">food thoughts</text>
+        <rect x="150" y="70" width="212" height="18" rx="9" fill="#B8431F"/>
+        <text x="34" y="112" font-family="Sora, sans-serif" font-size="11" fill="#4A4C40">everything else</text>
+        <rect x="150" y="100" width="60" height="18" rx="9" fill="#EFE7D2" stroke="#A79C82" stroke-width="1.5"/>
+        <line x1="34" y1="150" x2="366" y2="150" stroke="var(--line)" stroke-width="1"/>
+        <text x="34" y="186" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#1F6F5C">AFTER</text>
+        <!-- after: food thoughts short -->
+        <text x="34" y="216" font-family="Sora, sans-serif" font-size="11" fill="#4A4C40">food thoughts</text>
+        <rect x="150" y="204" width="52" height="18" rx="9" fill="#1F6F5C"/>
+        <text x="34" y="246" font-family="Sora, sans-serif" font-size="11" fill="#4A4C40">everything else</text>
+        <rect x="150" y="234" width="212" height="18" rx="9" fill="#E7F1EC" stroke="#1F6F5C" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="row-text">
+      <div class="row-num">05 / 07</div>
+      <h3>What most people notice first is the silence.</h3>
+      <p>Ask people what changed and they rarely lead with the scale. They talk about the quiet. Food becomes neutral. A plate is just a plate, not a negotiation.</p>
+      <p>Many patients report smaller portions without white-knuckling, because they finally feel full. The mental space that used to run food calculations all day comes back for other things. Many report this in the first few weeks. Results vary, but the silence in your own head is the part people say they did not know they were missing.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 6 - Physician supervision (PHOTO placeholder) -->
+  <div class="row rev reveal">
+    <div class="row-img">
+      <!-- AI IMAGE PROMPT: A photorealistic editorial magazine photo, warm natural light, 4:3, no text in the image. A woman in her forties sits comfortably on her own couch at home in soft daylight, holding a phone in a relaxed telehealth video visit, calm and reassured. A friendly out-of-focus clinician is visible on the phone screen. Cozy, trustworthy, unstaged, warm cream and sage tones that match an editorial wellness brand. The feeling is safe, supervised, and easy, not clinical or cold. -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23EFE7D2'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='13' fill='%23A79C82' text-anchor='middle'%3Ephoto placeholder 4:3%3C/text%3E%3C/svg%3E" alt="A woman in her forties sits on her couch at home holding a phone during a relaxed telehealth visit with a provider.">
+    </div>
+    <div class="row-text">
+      <div class="row-num">06 / 07</div>
+      <h3>A licensed provider reviews you and prescribes, from your couch.</h3>
+      <p>This is prescription medication, so it is not something you order like a supplement, and that is the point. With Blissley, a <strong>licensed U.S. provider</strong> reviews your health history, decides whether it is appropriate for you, and sets your dosing.</p>
+      <p>Check-ins happen over time. If you are approved, your compounded medication ships to your door. No waiting rooms, no guessing on your own, and real medical oversight at every step.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 7 - Starting takes 2 minutes (PHOTO placeholder) -->
+  <div class="row reveal">
+    <div class="row-img">
+      <!-- AI IMAGE PROMPT: A photorealistic editorial magazine photo, warm morning light, 4:3, no text in the image. A woman in her late thirties or forties stands relaxed at a kitchen counter with a coffee, calmly tapping through a short quiz on her phone, a small hopeful half-smile. Everyday and real, warm cream, terracotta and sage palette matching an editorial wellness brand. The mood is light and low-pressure, the beginning of something, not a hard sell. -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23EFE7D2'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='13' fill='%23A79C82' text-anchor='middle'%3Ephoto placeholder 4:3%3C/text%3E%3C/svg%3E" alt="A woman in her forties stands at a kitchen counter with coffee, calmly tapping through a short quiz on her phone.">
+    </div>
+    <div class="row-text">
+      <div class="row-num">07 / 07</div>
+      <h3>Finding out takes about two minutes.</h3>
+      <p>You do not have to commit to anything to see if this fits. The first step is a short eligibility quiz, around two minutes.</p>
+      <p>You see transparent pricing before you decide, there is <strong>no long-term contract</strong>, and you can cancel anytime. If a provider does not think it is right for you, you have lost nothing but two minutes. If it is, you could be at the start of the calmest your head has felt in years.</p>
+    </div>
+  </div>
+
+</div>
+
+<section class="worth reveal">
+  <div class="worth-box">
+    <h3>Is it actually worth it?</h3>
+    <p><strong>On cost:</strong> Weigh it against what the last decade of programs, shakes, apps, and regained weight already cost you, in money and in mornings. Blissley shows you the price up front, with no surprise fees.</p>
+    <p><strong>On safety:</strong> It is prescription-only for a reason. A licensed provider reviews your history first and supervises your care from the first visit on. It is not right for everyone, and an honest provider will tell you if it is not right for you.</p>
+    <p><strong>On "what if it doesn't work for me":</strong> There is no long-term contract and you can cancel anytime, so you are not locked into a year to find out. You answer a few questions, a provider reviews them, and you go from there.</p>
+  </div>
+</section>
+
+<!-- QUIZ MOUNT: embed the live 2-minute eligibility quiz form here. Every CTA button links to #quiz; swap "#quiz" for the live QUIZ_URL (or mount the quiz on this anchor) before launch so no CTA is a dead end. -->
+<div id="quiz" style="scroll-margin-top:20px;"></div>
+
+<div class="cta reveal">
+  <svg class="cta-mark" viewBox="0 0 74 74" role="img" aria-label="A calm, quiet head icon">
+    <circle cx="37" cy="37" r="35" fill="none" stroke="#C98A2C" stroke-width="2.5" opacity="0.55"/>
+    <path d="M26,52 C22,40 25,29 34,26 C44,23 52,31 51,41 C50.5,47 47,51 42,54 L42,58 L30,58 L30,54 Z" fill="none" stroke="#FBF6EC" stroke-width="2.4" stroke-linejoin="round"/>
+    <line x1="30" y1="40" x2="46" y2="40" stroke="#FBF6EC" stroke-width="2.4" stroke-linecap="round"/>
+  </svg>
+  <h2>Imagine a quiet mind at dinner.</h2>
+  <p>No running tally. No negotiation. Just the meal in front of you, and the rest of your evening back. See if you qualify in about two minutes.</p>
+  <a class="btn" href="#quiz">Take the 2-Minute Quiz</a>
+  <p class="fineprint">Licensed U.S. providers · Personalized plan · Cancel anytime</p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>This is a paid advertisement. Individual results vary, and clinical trial outcomes are not a guarantee of any individual's results. Food noise is a commonly used term for intrusive thoughts about food and is not a formal medical diagnosis. Tirzepatide is a prescription medication and should only be used under the guidance of a licensed healthcare provider following an individual consultation. Common side effects include nausea, vomiting, diarrhea, and constipation; more serious risks can include pancreatitis and gallbladder disease. Tirzepatide carries a boxed warning regarding the risk of thyroid C-cell tumors and should not be used by individuals with a personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2. Branded tirzepatide is not indicated for the treatment of type 1 diabetes. Compounded medications are not FDA-approved and may only be appropriate for patients with a documented clinical need that cannot be met by an FDA-approved product. Nothing on this page is medical advice. Talk to a licensed provider to determine if this treatment is right for you.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <span>The noise has a name. And a way out.</span>
+  <a class="btn" href="#quiz">See If You Qualify</a>
+</div>
+
+<script>
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target);} });
+    }, {threshold:0.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('is-visible'); }); }
+
+  var sticky = document.getElementById('stickyCta');
+  var hero = document.querySelector('.hero');
+  if('IntersectionObserver' in window && sticky && hero){
+    var hio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ sticky.classList.remove('show'); } else { sticky.classList.add('show'); } });
+    }, {threshold:0});
+    hio.observe(hero);
+  }
+</script>
+
+</body>
+</html>
